@@ -49,4 +49,18 @@ for i in range(r):
         m2[j][r-i-1]=m[i][j]
 for i in range(r):
     print(m2[i])
-    
+    '''m= ['Aa','Ba','CC','dD','AA']
+s=''
+for i in m:
+  s+=i
+ss=s
+s=s.lower()
+l=set()
+
+for i in s:
+  l.add(i)
+print(l[1])
+for i in range(1,len(l)):
+  if l[i].up() in ss:
+    print('4')
+print(sorted(l))'''
