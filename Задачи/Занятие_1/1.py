@@ -1,6 +1,0 @@
-lastName,name= input('Ваши фамилия, имя?').split()
-age= input('Сколько вам лет?')
-address= input('Где вы живете?')
-print('Ваши фамилия, имя',lastName,name)
-print('Ваш возраст',age)
-print('Вы живете в',address)
