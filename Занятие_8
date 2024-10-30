@@ -1,0 +1,24 @@
+# #1
+# print('\n#1')
+# import re
+# s=input("Введите строку: ")
+# while s!='':
+#     if re.fullmatch(r'[А-Я]\d{3}[А-Я]{2}\d{2,3}', s):
+#         print('Это регистрационный номер частного автомобиля.')
+#     elif re.fullmatch(r'[А-Я]{2}\d{4,5}', s):
+#         print('Это регистрационный номер такси.')
+#     else:
+#         print('Строка не является регистрационным номером.')
+#     s=input("Введите строку: ")
+#2
+print('\n#2')
+import re
+from functools import reduce
+file = open('Занятие_8_Текст.txt', 'r', encoding='utf-8')
+s = file.readlines()
+words= reduce(lambda x,y:  x[:-1]+' '+y, s).split()
+print(len(list(filter(lambda x: re.split(r'\b[А-Яа-яёЁ]+[-]?[А-Яа-яёЁ]+\b',x), words))))
+#3
+print('\n#3')
+#4
+print('\n#4')
