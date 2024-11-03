@@ -1,9 +1,9 @@
 # 1
+print('\n#1')
+
 from matplotlib import pyplot as plt
 import os
 import numpy as np
-print('\n#1')
-
 
 dir = os.getcwd()
 x = np.linspace(-2, 2, 1000)
@@ -33,6 +33,9 @@ plt.savefig(dir + '/Занятие_9_1.png', dpi=300)
 # 2
 print('\n#2')
 
+from matplotlib import pyplot as plt
+import os
+import numpy as np
 
 dir = os.getcwd()
 x = np.linspace(0, 5, 1000)
@@ -79,6 +82,9 @@ plt.savefig(dir + '/Занятие_9_2.png', dpi=300)
 # 3
 print('\n#3')
 
+from matplotlib import pyplot as plt
+import os
+import numpy as np
 
 dir = os.getcwd()
 x = np.linspace(-5, 0, 1000)
@@ -127,6 +133,9 @@ plt.savefig(dir + '/Занятие_9_3.png', dpi=300)
 # 4
 print('\n#4')
 
+from matplotlib import pyplot as plt
+import os
+import numpy as np
 
 dir = os.getcwd()
 x = np.linspace(-5, 5, 1000)
