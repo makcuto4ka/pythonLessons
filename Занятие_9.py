@@ -103,7 +103,7 @@ def f(x, a, b):
 plt.plot(x, f(x, a=1, b=1), label='a=1,b=1', color='red')
 plt.plot(x, f(x, a=2, b=1), label='a=2,b=1', color='blue')
 plt.plot(x, f(x, a=1, b=2), label='a=1,b=2', color='green')
-plt.plot(x, [0]*len(x), label='ox=0', color='black')
+plt.plot(x, [0]*len(x), label='f(x)=0', color='black')
 plt.xlabel('Ось X')
 plt.ylabel('Ось Y')
 plt.title('f(x)=(x^b+a^b)/x^b')
