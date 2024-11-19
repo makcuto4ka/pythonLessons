@@ -18,3 +18,4 @@ print( df[df != df.loc[df['fruits_1'].isin(df['fruits_2']), 'fruits_1'].values])
 
 #3
 print('\n#3')
+
