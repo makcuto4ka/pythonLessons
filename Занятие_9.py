@@ -27,8 +27,8 @@ plt.ylabel('Ось Y')
 plt.title('f(x)=(x^b+a^b)/x^b')
 plt.legend()
 plt.grid()
-plt.show()
 plt.savefig(dir + '/Занятие_9_1.png', dpi=300)
+plt.show()
 
 # 2
 print('\n#2')
@@ -76,8 +76,8 @@ plt.plot(x, f(x, a=1, b=1), label='a=1,b=1', color='red')
 plt.plot(x, f(x, a=2, b=1), label='a=2,b=1', color='blue')
 plt.plot(x, f(x, a=1, b=2), label='a=1,b=2', color='green')
 
-plt.show()
 plt.savefig(dir + '/Занятие_9_2.png', dpi=300)
+plt.show()
 
 # 3
 print('\n#3')
@@ -127,9 +127,9 @@ plt.plot(x, f(x, a=2, b=1), label='a=2,b=1', color='blue')
 plt.plot(x, f(x, a=1, b=2), label='a=1,b=2', color='green')
 plt.plot(x, [0]*len(x), label='x=0', color='black')
 
-plt.show()
-plt.savefig(dir + '/Занятие_9_3.png', dpi=300)
 
+plt.savefig(dir + '/Занятие_9_3.png', dpi=300)
+plt.show()
 # 4
 print('\n#4')
 
@@ -161,7 +161,7 @@ plt.legend()
 plt.grid()
 x = np.linspace(-1, 2, 1000)
 plt.savefig(dir + '/Занятие_9_4.png', dpi=300)
-
+plt.show()
 def example_plot(ax, x, a, b1, b2, array_b, k, fontsize=12, hide_labels=False):
     ax.plot(x, f(x, a, b1), label=f'a={a},b={b1}', color='red')
     ax.plot(x, f(x, a, b2), label=f'a={a},b={b1}', color='blue')
@@ -189,3 +189,4 @@ for ax in axs.flat:
     k += 1
 
 plt.savefig(dir + '/Занятие_9_4_2.png', dpi=300)
+plt.show()
