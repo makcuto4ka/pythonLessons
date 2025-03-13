@@ -1,64 +1,64 @@
-# #   1
+#   1
 
 
-# class Person:
-#     def __init__(self, name, age):
-#         self.name = name
-#         self.age = int(age)
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = int(age)
 
 
 
-#     def __setattr__(self, key, value):
-#         print(key, value)
-#         if   key == 'name' and value == '' :
-#             raise ValueError('Name cannot be empty!')
-#         elif key == 'age' and value < 0:
-#             raise ValueError("Age must be a positive number!")
-#         else:
-#             return object.__setattr__(self, key, value)
-# p = Person("John", 25)  # Успешно
-# p.name = "Alice"         # Успешно
-# p.age = 30               # Успешно
-# p.name = ""              # ValueError: Name cannot be empty!
-# p.age = -5               # ValueError: Age must be a positive number!
+    def __setattr__(self, key, value):
+        print(key, value)
+        if   key == 'name' and value == '' :
+            raise ValueError('Name cannot be empty!')
+        elif key == 'age' and value < 0:
+            raise ValueError("Age must be a positive number!")
+        else:
+            return object.__setattr__(self, key, value)
+p = Person("John", 25)  # Успешно
+p.name = "Alice"         # Успешно
+p.age = 30               # Успешно
+p.name = ""              # ValueError: Name cannot be empty!
+p.age = -5               # ValueError: Age must be a positive number!
 
 
 
 # 2
 
-# class Counter:
+class Counter:
     
-#     def __getattribute__(self, item):
-#         print(f'Доступ к атрибуту {item}')
-#         return object.__getattribute__(self, item)
+    def __getattribute__(self, item):
+        print(f'Доступ к атрибуту {item}')
+        return object.__getattribute__(self, item)
     
-#     def __getattr__(self, item):
-#         return None
+    def __getattr__(self, item):
+        return None
     
     
-# c = Counter()
-# c.value = 5         # Атрибут value будет добавлен
-# print(c.value)      # Доступ к атрибуту value → 5
-# print(c.name)       # Доступ к атрибуту name → None
+c = Counter()
+c.value = 5         # Атрибут value будет добавлен
+print(c.value)      # Доступ к атрибуту value → 5
+print(c.name)       # Доступ к атрибуту name → None
 
 
 # 3
 
-# class Car:
-#     def __init__(self, make, model):
-#         self.make = make
-#         self.model = model
+class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
         
-#     def __getattribute__(self, item):
+    def __getattribute__(self, item):
         
-#         return object.__getattribute__(self, item)
+        return object.__getattribute__(self, item)
     
-#     def __getattr__(self, item):
-#         return 'This attribute is not available'
+    def __getattr__(self, item):
+        return 'This attribute is not available'
     
-# c = Car("Toyota", "Corolla")
-# print(c.make)      # Toyota
-# print(c.color)     # This attribute is not available
+c = Car("Toyota", "Corolla")
+print(c.make)      # Toyota
+print(c.color)     # This attribute is not available
 
 # 4
 
