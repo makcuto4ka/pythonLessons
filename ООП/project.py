@@ -24,7 +24,7 @@ class MP3Player:
 
 
     def set_volume(self, volume):
-        pygame.mixer.music.set_volume(max(0.0, min(1.0, volume)))
+        pygame.mixer.music.set_volume(0.5)
 
 
 

@@ -160,7 +160,7 @@ plt.title('f(x)=(x^b+a^b)/x^b')
 plt.legend()
 plt.grid()
 x = np.linspace(-1, 2, 1000)
-plt.savefig(dir + '/Занятие_9_4.png', dpi=300)
+plt.savefig(dir + '/Информатика/Занятие_9_4.png', dpi=300)
 plt.show()
 def example_plot(ax, x, a, b1, b2, array_b, k, fontsize=12, hide_labels=False):
     ax.plot(x, f(x, a, b1), label=f'a={a},b={b1}', color='red')
@@ -188,5 +188,5 @@ for ax in axs.flat:
     example_plot(ax, x, a, b1, b2, array_b, k)
     k += 1
 
-plt.savefig(dir + '/Занятие_9_4_2.png', dpi=300)
+plt.savefig(dir + '/Информатика/Занятие_9_4_2.png', dpi=300)
 plt.show()
