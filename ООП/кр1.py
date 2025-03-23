@@ -10,17 +10,13 @@ class LoggedClass:
 
     @data.setter
     def data(self, value):
-        if not isinstance(value, str):
-            raise ValueError("Data must be a string")
         self._data = value
 
 
 class Coordinates(LoggedClass):
     def __new__(cls, x, y):
-        if not (isinstance(x, (int, float)) and isinstance(y, (int, float))):
-            raise ValueError("x and y must be numbers")
         if x < 0 or y < 0:
-            raise ValueError("Coordinates must be non-negative")
+            raise ValueError("x и y — неотрицательные числа")
         instance = super().__new__(cls)
         return instance
 
@@ -31,3 +27,9 @@ class Coordinates(LoggedClass):
     @property
     def distance(self):
         return (self.x ** 2 + self.y ** 2) ** 0.5
+    
+
+c = Coordinates(3,4)  # OK, distance=5  
+# c = Coordinates(-1,2)  # ValueError  
+print(c.distance)  # 5.0  
+obj = LoggedClass()  
