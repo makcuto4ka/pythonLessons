@@ -1,12 +1,23 @@
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# class ClassA(object):
+#     def __init__(self, var1=5, var2=6):
+#         ClassA.var1 = var1
+#         ClassA.var2 = var2
 
-    @classmethod
-    def from_string(cls, data):
-        name, age = data.split(", ")
-        return cls(name, int(age))
+#     def methodA(self):
+#         ClassA.var1 = ClassA.var1 + ClassA.var2
+#         return ClassA.var1
 
-p = Person.from_string("Иван, 25")
-print(p.name, p.age)  # Иван 25
+
+
+# class ClassB(ClassA):
+#     def __init__(self):
+#         print( ClassA.var1)
+#         print (ClassA.var2)
+
+# object1 = ClassA()
+# sum = object1.methodA()
+# object2 = ClassB()
+a=[[i for i in range(1,10)]]*10
+print(a)
+b=[1,2]
+print(a[b])
