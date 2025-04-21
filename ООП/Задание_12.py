@@ -54,5 +54,5 @@ try:
     print(emp.get_sorted_employees())
     print(emp.average_salary())
 except TypeError:
-    print('Зарплата должен быть числом')
+    print('Зарплата должена быть числом')
     
