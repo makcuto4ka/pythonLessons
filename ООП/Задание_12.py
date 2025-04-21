@@ -1,34 +1,34 @@
-# def find_elements_by_index(values, indices):
-#     result = []
-#     try:
-#         for index in indices:
-#             result.append(values[index])
-#         return result
-#     except IndexError as e:
-#         return f"Ошибка индекса: {e}"
-# print(find_elements_by_index([ i for i in range(10)], [ i for i in range(10)][::-1] ))
+def find_elements_by_index(values, indices):
+    result = []
+    try:
+        for index in indices:
+            result.append(values[index])
+        return result
+    except IndexError as e:
+        return f"Ошибка индекса: {e}"
+print(find_elements_by_index([ i for i in range(10)], [ i for i in range(10)][::-1] ))
 
 
-# # 2
+# 2
 
-# import math
+import math
 
-# class Circle:
-#     def __init__(self, radius):
-#         self.radius = radius
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
 
-#     @property
-#     def diameter(self):
-#         return self.radius * 2
+    @property
+    def diameter(self):
+        return self.radius * 2
 
-#     def area(self):
-#         return math.pi * self.radius ** 2
+    def area(self):
+        return math.pi * self.radius ** 2
     
-# try:
-#     c=Circle(1)
-#     print(c.area())
-# except TypeError:
-#     print('Радиус должен быть числом')
+try:
+    c=Circle(1)
+    print(c.area())
+except TypeError:
+    print('Радиус должен быть числом')
     
 # 3
 
