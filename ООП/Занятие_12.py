@@ -56,3 +56,5 @@ try:
 except TypeError:
     print('Зарплата должена быть числом')
     
+
+    

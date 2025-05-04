@@ -1,38 +1,38 @@
-# class Point2D():
-#     def __init__(self, x, y):
-#         self.x=x
-#         self.y=y
+class Point2D():
+    def __init__(self, x, y):
+        self.x=x
+        self.y=y
         
-# class Point3D(Point2D):
-#     __slots__=('_z',)
+class Point3D(Point2D):
+    __slots__=('_z',)
     
-#     def __init__(self, x, y):
-#         super().__init__(x, y)
+    def __init__(self, x, y):
+        super().__init__(x, y)
         
-#     @property
-#     def z(self):
-#         return self._z
+    @property
+    def z(self):
+        return self._z
 
-#     @z.setter
-#     def z(self, value):
-#         raise AttributeError("z запрещено")
+    @z.setter
+    def z(self, value):
+        raise AttributeError("z запрещено")
         
-# pt3 = Point3D(10, 20, 30)
-# print("pt3.z =", pt3.z)
+pt3 = Point3D(10, 20, 30)
+print("pt3.z =", pt3.z)
 
-# try:
-#     pt3.z = 40 
-# except AttributeError as e:
-#     print("Ошибка при изменении pt3.z:", e)
+try:
+    pt3.z = 40 
+except AttributeError as e:
+    print("Ошибка при изменении pt3.z:", e)
 
 
-# try:
-#     print(pt3.__dict__)
-# except AttributeError as e:
-#     print("Ошибка при обращении к pt3.__dict__:", e)
+try:
+    print(pt3.__dict__)
+except AttributeError as e:
+    print("Ошибка при обращении к pt3.__dict__:", e)
 
-# print("pt3.__slots__:", pt3.__slots__)
-# print("pt3.x =", pt3.x)
+print("pt3.__slots__:", pt3.__slots__)
+print("pt3.x =", pt3.x)
 
 
 
