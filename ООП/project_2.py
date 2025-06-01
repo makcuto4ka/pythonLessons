@@ -84,9 +84,7 @@ class GameGUI:
         self.gui.config(menu=menu)
 
     def create_widgets(self):
-        self.canvas = tk.Canvas(self.gui,
-                                width=self.cell_size*self.board.size,
-                                height=self.cell_size*self.board.size)
+        self.canvas = tk.Canvas(self.gui, width=self.cell_size*self.board.size, height=self.cell_size*self.board.size)
         self.canvas.pack()
         self.canvas.bind("<Button-1>", self.on_canvas_click)
 
@@ -224,8 +222,6 @@ class GameGUI:
 
     def update_status(self):
         p1, p2 = self.players
-        self.status_label.config(
-            text=f"{p1.color}: {p1.score}  |  {p2.color}: {p2.score}"
-        )
+        self.status_label.config( text=f"{p1.color}: {p1.score}  |  {p2.color}: {p2.score}")
 
 GameGUI()
